@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Qualidade de Vida dos Produtos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'produtos/css/dashboard_style.css' %}">
+   
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="{% static 'produtos/img/logo_lifemetric.png' %}" alt="Logo da Empresa" class="logo">
+    </header>
+</div>
+
+<h1>Dashboard de Qualidade de Vida dos Produtos</h1>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Qualidade de Vida (%)</th>
+        <th>Condição</th>
+        <th>Data de Aquisição</th>
+        <th>Ciclos de Uso</th>
+    </tr>
+    {% for produto in produtos_qualidade_vida %}
+    <tr>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.qualidade_vida }}</td>
+        <td>{{ produto.condicao }}</td>
+        <td>{{ produto.data_aquisicao }}</td>
+        <td>{{ produto.ciclos_uso }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'produtos/css/listar_style.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="{% static 'produtos/img/logo_lifemetric.png' %}" alt="Logo da Empresa" class="logo">
+    </header>
+    <h1>Lista de Produtos Cadastrados</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço (R$)</th>
+            <th>Categoria</th>
+            <th>Marca</th>
+            <th>Data de Aquisição</th>
+            <th>Ciclos de Uso</th>
+            <th>Condição</th>
+        </tr>
+        {% for produto in produtos %}
+        <tr>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.descricao }}</td>
+            <td>{{ produto.preco }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>{{ produto.marca }}</td>
+            <td>{{ produto.data_aquisicao }}</td>
+            <td>{{ produto.ciclos_uso }}</td>
+            <td>{{ produto.condicao }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+</body>
+</html>
