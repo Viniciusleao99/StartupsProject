@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LifeMetric</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="home.html"><img src="/logo-lifemetric.jpeg" alt="LifeMetric Logo"></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cadastro.html" class="active">Cadastre-se</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Título informativo abaixo do cabeçalho -->
+    <section class="intro-section">
+        <h1>Faça Login para Acessar sua Conta</h1>
+        <p>Entre com seu e-mail e senha para monitorar o desempenho dos seus produtos.</p>
+    </section>
+
+    <!-- Formulário de Login -->
+    <section class="signup-section">
+        <h2>Faça Login na LifeMetric</h2>
+        <p>Acesse sua conta para monitorar e gerenciar o desempenho de seus produtos.</p>
+        <form method="post" action="process_login">
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não possui uma conta? <a href="cadastro.html" target="_blank">Cadastre-se</a></p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>LifeMetric &copy; 2024 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

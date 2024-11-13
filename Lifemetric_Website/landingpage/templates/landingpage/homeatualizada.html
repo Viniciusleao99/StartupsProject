@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeMetric - Monitoramento de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="{% static 'landingpage/styles.css' %}">-->
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home"><img src="/logo-lifemetric.jpeg" alt="LifeMetric Logo"></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="cadastro.html">Cadastrar</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Sobre Nós com frase e botão -->
+    <section id="about" class="about-section">
+        <div class="about-intro">
+            <h1>Bem-vindo à LifeMetric, sua solução ideal para monitoramento e insights de durabilidade em tempo real.</h1>
+            <a href="#contact" class="cta-button">Entrar em Contato</a>
+        </div>
+        <h2>Sobre Nós</h2>
+        <p>A LifeMetric é uma empresa focada em fornecer soluções inovadoras para o monitoramento da durabilidade e do desempenho de produtos em tempo real. Com tecnologia de ponta e visão computacional, ajudamos empresas a prever falhas e otimizar o ciclo de vida dos seus ativos, promovendo uma gestão mais eficiente.</p>
+        <div class="about-content">
+            <div class="about-feature">
+                <h3>🔍 Análise Preditiva</h3>
+                <p>Identifique falhas antes que elas aconteçam com nossas ferramentas avançadas de análise preditiva.</p>
+            </div>
+            <div class="about-feature">
+                <h3>📊 Monitoramento em Tempo Real</h3>
+                <p>Monitore o desempenho do produto e métricas com recursos de monitoramento em tempo real.</p>
+            </div>
+            <div class="about-feature">
+                <h3>🔗 Integração ERP e CRM</h3>
+                <p>Integre facilmente com seus sistemas ERP e CRM para simplificar seu fluxo de dados.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Funcionalidades -->
+    <section id="features" class="product-section">
+        <h2>Nossas Funcionalidades</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="/Insights.jpeg" alt="Produto 1">
+                <h3>Insights Preditivos</h3>
+                <p>Utilize análises de ponta para prever possíveis falhas e otimizar o ciclo de vida do produto.</p>
+            </div>
+            <div class="product">
+                <img src="/Dashboard.png" alt="Produto 2">
+                <h3>Dashboard Interativo</h3>
+                <p>Acompanhe o desempenho em tempo real com nosso painel visual e intuitivo.</p>
+            </div>
+            <div class="product">
+                <img src="/relatórios.jpg" alt="Produto 3">
+                <h3>Relatórios Personalizáveis</h3>
+                <p>Gere relatórios detalhados e personalizados sobre a vida útil do produto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Planos -->
+    <section id="plans" class="plans-section">
+        <h2>Escolha o seu Plano</h2>
+        <div class="plans-grid">
+            <div class="plan-box">
+                <h3>Plano Básico</h3>
+                <p>Ideal para pequenas empresas. Aproveite o monitoramento básico e relatórios mensais.</p>
+                <span class="price">R$99/mês</span>
+            </div>
+            <div class="plan-box">
+                <h3>Plano Profissional</h3>
+                <p>Para empresas que precisam de monitoramento em tempo real e relatórios avançados.</p>
+                <span class="price">R$199/mês</span>
+            </div>
+            <div class="plan-box">
+                <h3>Plano Corporativo</h3>
+                <p>Com todas as funcionalidades completas, indicado para grandes corporações.</p>
+                <span class="price">R$399/mês</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Cadastro/Contato -->
+<section id="contact" class="signup-section">
+    <h2>Entre em contato conosco para saber mais</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <input type="int" name="phone" placeholder="Seu número de telefone" required>
+        <input type="text" name="subject" placeholder="Assunto" required>
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+    <footer>
+        <p>LifeMetric &copy; 2024 - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Carregar o arquivo JavaScript -->
+<script src="{% static 'landingpage/js/form-validation.js' %}"></script>
+</body>
+</html>
