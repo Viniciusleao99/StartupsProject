@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeMetric - Monitoramento de Produtos</title>
-    <link rel="stylesheet" href="{% static 'landingpage/styles.css' %}">
+    <link rel="stylesheet" href="styles.css">
+    <!--<link rel="stylesheet" href="{% static 'landingpage/styles.css' %}">-->
 </head>
 <body>
     <!-- Cabeçalho -->
     <header class="main-header">
         <div class="container">
             <div class="logo">
-                <a href="#home"><img src="{% static 'images/logo.png' %}" alt="LifeMetric Logo"></a>
+                <a href="#home"><img src="/logo-lifemetric.jpeg" alt="LifeMetric Logo"></a>
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#features">Funcionalidades</a></li>
                     <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
                     <li><a href="#plans">Planos</a></li>
                     <li><a href="#contact">Contato</a></li>
+                    <li><a href="cadastro.html">Cadastrar</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -29,7 +32,7 @@
     <section id="about" class="about-section">
         <div class="about-intro">
             <h1>Bem-vindo à LifeMetric, sua solução ideal para monitoramento e insights de durabilidade em tempo real.</h1>
-            <a href="#contact" class="cta-button">Cadastre-se Agora</a>
+            <a href="#contact" class="cta-button">Entrar em Contato</a>
         </div>
         <h2>Sobre Nós</h2>
         <p>A LifeMetric é uma empresa focada em fornecer soluções inovadoras para o monitoramento da durabilidade e do desempenho de produtos em tempo real. Com tecnologia de ponta e visão computacional, ajudamos empresas a prever falhas e otimizar o ciclo de vida dos seus ativos, promovendo uma gestão mais eficiente.</p>
@@ -54,17 +57,17 @@
         <h2>Nossas Funcionalidades</h2>
         <div class="product-grid">
             <div class="product">
-                <img src="{% static 'images/product1.jpg' %}" alt="Produto 1">
+                <img src="/Insights.jpeg" alt="Produto 1">
                 <h3>Insights Preditivos</h3>
                 <p>Utilize análises de ponta para prever possíveis falhas e otimizar o ciclo de vida do produto.</p>
             </div>
             <div class="product">
-                <img src="{% static 'images/product2.jpg' %}" alt="Produto 2">
+                <img src="/Dashboard.png" alt="Produto 2">
                 <h3>Dashboard Interativo</h3>
                 <p>Acompanhe o desempenho em tempo real com nosso painel visual e intuitivo.</p>
             </div>
             <div class="product">
-                <img src="{% static 'images/product3.jpg' %}" alt="Produto 3">
+                <img src="/relatórios.jpg" alt="Produto 3">
                 <h3>Relatórios Personalizáveis</h3>
                 <p>Gere relatórios detalhados e personalizados sobre a vida útil do produto.</p>
             </div>
@@ -95,7 +98,7 @@
 
     <!-- Seção de Cadastro/Contato -->
 <section id="contact" class="signup-section">
-    <h2>Cadastre-se para saber mais</h2>
+    <h2>Entre em contato conosco para saber mais</h2>
     <form method="post">
         {% csrf_token %}
         <input type="text" name="name" placeholder="Seu nome" required>
