@@ -1,4 +1,17 @@
-/* Header */
+html, body {
+    height: 100%;
+    margin-top: auto;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; 
+    overflow-x: hidden;
+}
+
+/* Cabeçalho fixo */
 .main-header {
     background-color: #006633;
     color: white;
@@ -45,14 +58,14 @@
 
 .nav-menu ul li a:hover {
     background-color: #33cc33;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 .nav-menu ul li a.active {
     background-color: #28a428;
 }
 
-/* Seção de introdução na seção Sobre Nós */
+/* Seção de Introdução */
 .about-intro {
     text-align: center;
     margin-bottom: 40px;
@@ -73,11 +86,22 @@
     border-radius: 5px;
 }
 
-/* Seção Sobre Nós */
-.about-section {
+/* Seções de conteúdo */
+.about-section, .product-section, .plans-section, .signup-section {
     padding: 100px 20px 60px;
-    background-color: #f0fff0;
     text-align: center;
+    width: 100%;
+}
+
+
+.main-content {
+    flex: 1; 
+    padding-bottom: 100px;
+}
+
+/* Sobre Nós - Layout do conteúdo */
+.about-section {
+    background-color: #f0fff0;
 }
 
 .about-content {
@@ -94,11 +118,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Seção de Funcionalidades */
+/* Funcionalidades - Layout do conteúdo */
 .product-section {
     background-color: #e0ffe0;
-    padding: 60px 20px;
-    text-align: center;
 }
 
 .product-grid {
@@ -122,11 +144,9 @@
     border-bottom: 2px solid #33cc33;
 }
 
-/* Seção de Planos */
+/* Planos - Layout do conteúdo */
 .plans-section {
     background-color: #f0fff0;
-    padding: 60px 20px;
-    text-align: center;
 }
 
 .plans-grid {
@@ -156,16 +176,13 @@
     display: block;
 }
 
-/* Links âncora */
-a {
-    cursor: pointer;
-}
-
-/* Seção de Cadastro/Contato */
+/* Seção de Cadastro */
 .signup-section {
-    padding: 60px 20px;
     background-color: #ccffcc;
     text-align: center;
+    width: 100%;
+    flex-grow: 1;
+    padding: 60px 20px;
 }
 
 .signup-section form {
@@ -175,7 +192,8 @@ a {
     flex-direction: column;
 }
 
-.signup-section form input, .signup-section form button {
+.signup-section form input,
+.signup-section form button {
     padding: 15px;
     margin: 10px 0;
     font-size: 16px;
@@ -194,12 +212,14 @@ a {
     font-family: 'Courier New', Courier, monospace;
 }
 
-/* Footer */
+/* Rodapé */
 footer {
     background-color: #003300;
     color: white;
     text-align: center;
     padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Faz o rodapé ficar na parte inferior */
 }
 
 /* Responsividade */
@@ -239,6 +259,6 @@ footer {
     }
 
     .signup-section form {
-        width: 90%;
+        width: 100%;
     }
 }
